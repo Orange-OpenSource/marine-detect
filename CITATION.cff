@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+preferred-citation:
+  type: software
+  message: If you use this software, please cite it as below.
+  version: 0.0.1
+  authors:
+  - family-names: Charles
+    given-names: Eléonore
+  title: "marine-detect: Object Detection Models for Identifying Species in Marine Environments"
+  date-released: 2024-01-01
+  license: AGPL-3.0
+  url: "https://github.com/Orange-OpenSource/marine-detect"
