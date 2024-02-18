@@ -16,4 +16,4 @@ numpy==1.24.4
 opencv-python==4.8.0.74
 tqdm==4.65.0
 ultralytics==8.0.200
-pillow==10.0.0
+pillow==10.2.0
