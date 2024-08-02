@@ -23,7 +23,7 @@ These species are **"bio-indicating"** species, which serve as indicators of the
 
 ## 📊 Datasets Details
 
-The models utilize a combination of publicly available datasets (~ 90%) and Tēnaka-based datasets (~ 10%). Some datasets were already annotated, and others undergo manual labeling. 
+The models utilize a combination of publicly available datasets (~ 90%) and Tēnaka-based datasets (~ 10%). Some datasets were already annotated, and others undergo manual labeling.
 
 References to the public datasets used can be found in the 'References' section of this README.
 
@@ -31,10 +31,10 @@ The images used with annotations (YOLO format) can be downloaded using the follo
 
 ### Datasets split details
 
-| Model          | Training + Validation Sets | Test Set |
-| -------------- | -------------------------- | -------- |
-| FishInv        | 9,703 images (80%, 20%)   | 501  images    |
-| MegaFauna      | 8,130 images (80%, 20%)   | 253  images    |
+| Model          | Training + Validation Sets | Test Set     |
+| -------------- | -------------------------- | --------     |
+| FishInv        | 12,243 images (80%, 20%)   | 499  images  |
+| MegaFauna      | 8,130 images (80%, 20%)    | 253  images  |
 
 > [!NOTE]
 > The rationale behind the development of two distinct models lies in the utilization of already annotated images available in public datasets. By having separate models, we sidestep the necessity of reannotating images that already encompass annotations for specific species with every Fish, Invertebrates and MegaFauna species.  For example, we found a lot of images of turtles already annotated. If we were to adopt a single, all-encompassing model for both Fish and Invertebrates Species 🐟 and MegaFauna 🦈, it would necessitate the reannotation of all those turtle images to include species like urchins, fishes, ...
@@ -66,21 +66,21 @@ You can download the trained models using the following links: [FishInv model](h
 
 | Class                  | Images | Instances | mAP50 | mAP50-95 |
 | ---------------------- | ------ | --------- | ----- | -------- |
-| fish                   | 501    | 215       | 0.589 | 0.440    |
-| serranidae             | 501    | 44        | 0.769 | 0.716    |
-| urchin                 | 501    | 76        | 0.795 | 0.474    |
-| scaridae               | 501    | 51        | 0.819 | 0.755    |
-| chaetodontidae         | 501    | 64        | 0.859 | 0.779    |
-| giant_clam             | 501    | 100       | 0.884 | 0.564    |
-| lutjanidae             | 501    | 70        | 0.892 | 0.789    |
-| muraenidae             | 501    | 60        | 0.931 | 0.766    |
-| sea_cucumber           | 501    | 33        | 0.95  | 0.923    |
-| haemulidae             | 501    | 22        | 0.952 | 0.916    |
-| lobster                | 501    | 31        | 0.984 | 0.841    |
-| crown_of_thorns        | 501    | 28        | 0.995 | 0.779    |
-| bolbometopon_muricatum | 501    | 18        | 0.995 | 0.884    |
-| cheilinus_undulatus    | 501    | 30        | 0.995 | 0.954    |
-| cromileptes_altivelis  | 501    | 30        | 0.995 | 0.944    |
+| fish                   | 499    | 259       | 0.616 | 0.501    |
+| serranidae             | 499    | 49        | 0.850 | 0.777    |
+| urchin                 | 499    | 80        | 0.743 | 0.479    |
+| scaridae               | 499    | 48        | 0.828 | 0.794    |
+| chaetodontidae         | 499    | 65        | 0.891 | 0.827    |
+| giant_clam             | 499    | 102       | 0.870 | 0.602    |
+| lutjanidae             | 499    | 86        | 0.865 | 0.777    |
+| muraenidae             | 499    | 58        | 0.949 | 0.809    |
+| sea_cucumber           | 499    | 33        | 0.969 | 0.939    |
+| haemulidae             | 499    | 22        | 0.972 | 0.945    |
+| lobster                | 499    | 31        | 0.984 | 0.877    |
+| crown_of_thorns        | 499    | 28        | 0.981 | 0.790    |
+| bolbometopon_muricatum | 499    | 19        | 0.993 | 0.936    |
+| cheilinus_undulatus    | 499    | 29        | 0.995 | 0.968    |
+| cromileptes_altivelis  | 499    | 30        | 0.995 | 0.945    |
 
 </details>
 
@@ -122,7 +122,7 @@ from marine_detect.predict import predict_on_images, predict_on_video
 # Predict on a set of images using FishInv and MegaFauna models
 predict_on_images(
     model_paths=["path/to/FishInv/model", "path/to/MegaFauna/model"],
-    confs_threshold=[0.471, 0.6],
+    confs_threshold=[0.522, 0.6],
     images_input_folder_path="path/to/input/images",
     images_output_folder_path="path/to/output/folder",
 )
@@ -130,13 +130,13 @@ predict_on_images(
 # Predict on a video using FishInv and MegaFauna models
 predict_on_video(
     model_paths=["path/to/FishInv/model", "path/to/MegaFauna/model"],
-    confs_threshold=[0.471, 0.6],
+    confs_threshold=[0.522, 0.6],
     input_video_path="path/to/input/video.mp4",
     output_video_path="path/to/output/video.mp4",
 )
 ```
 > [!NOTE]
-> The optimal confidence thresholds for the FishInv model and the MegaFauna model are 0.471 and 0.6, respectively.
+> The optimal confidence thresholds for the FishInv model and the MegaFauna model are 0.522 and 0.6, respectively.
 
 The resulting images or video files will have bounding boxes annotations, visually indicating the location and extent of the detected marine species within the original data. 
 
@@ -166,6 +166,12 @@ For example:
 - Dataset. (2022).  Dataset Dataset  [ Open Source Dataset ]. In  Roboflow Universe .  Roboflow . https://universe.roboflow.com/dataset-gdypo/dataset-axhm3
 - Addison Howard, W. K., Eunbyung Park. (2018). ImageNet Object Localization Challenge. Kaggle. https://kaggle.com/competitions/imagenet-object-localization-challenge
 - Australian Institute of Marine Science (AIMS), University of Western Australia (UWA) and Curtin University. (2019), OzFish Dataset - Machine learning dataset for Baited Remote Underwater Video Stations, https://doi.org/10.25845/5e28f062c5097
+- GBIF.org (09 January 2024) GBIF Occurrence Download  https://doi.org/10.15468/dl.w5xy62
+- GBIF.org (09 January 2024) GBIF Occurrence Download  https://doi.org/10.15468/dl.a5uwzp
+- GBIF.org (09 January 2024) GBIF Occurrence Download  https://doi.org/10.15468/dl.r5xqkc
+- GBIF.org (09 January 2024) GBIF Occurrence Download  https://doi.org/10.15468/dl.ug7n62
+- GBIF.org (19 December 2023) GBIF Occurrence Download  https://doi.org/10.15468/dl.32mwtb
+
 
 ### Model
 
