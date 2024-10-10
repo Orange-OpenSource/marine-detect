@@ -114,6 +114,7 @@ pip install -r requirements.txt
 - Make sure pyenv is installed and working
 - The, run the following commands in the project directory:
 ```shell
+pyenv install 3.10
 pyenv local 3.10
 python -m venv venv
 source venv/bin/activate
