@@ -88,7 +88,7 @@ You can download the trained models using the following links: [FishInv model](h
 
 ### 🏁 Environment Setup
 
-There are 2 options to install the development environment.
+There are 3 options to install the development environment.
 
 #### Option 1 - Developing Inside a Docker Container with Visual Studio Code's Dev Containers Extension (recommended):
 
@@ -102,10 +102,21 @@ Note that the Dockerfile was created for CPU machines. If you wish to use GPU fo
 #### Option 2 - Developing on Your Host OS with Anaconda:
 
 - Make sure Conda is installed and working on your machine (to do so, click [here](https://www.anaconda.com/download)).
-- Then, run the following commands:
+- Then, run the following commands in the project directory:
 ```shell
 conda create --name your_env_name python=3.10
 conda activate your_env_name
+pip install -r requirements.txt
+```
+
+#### Option 3 - Developing on Your Host OS with PIP:
+
+- Make sure pyenv is installed and working
+- The, run the following commands in the project directory:
+```shell
+pyenv local 3.10
+python -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
