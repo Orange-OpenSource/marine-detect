@@ -129,7 +129,7 @@ To make predictions on images or videos using the marine detection models, follo
 2. **Prediction Functions**: Utilize the following Python functions to generate predictions with bounding box annotations.
 
 ```python
-from marine_detect.predict import predict_on_images, predict_on_video
+from src.marine_detect.predict import predict_on_images, predict_on_video
 
 # Predict on a set of images using FishInv and MegaFauna models
 predict_on_images(
