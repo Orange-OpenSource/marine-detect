@@ -27,7 +27,7 @@ The models utilize a combination of publicly available datasets (~ 90%) and Tēn
 
 References to the public datasets used can be found in the 'References' section of this README.
 
-The images used with annotations (YOLO format) can be downloaded using the following links: [FishInv dataset](https://stpubtenakanclyw.blob.core.windows.net/marine-detect/FishInv-dataset.zip?sp=r&st=2024-02-16T12:11:04Z&se=2025-02-16T20:11:04Z&spr=https&sv=2022-11-02&sr=c&sig=p68C1yNzj49DEgoJZQCX3uG5MK%2FQ3J%2BwIBE9l7NrEGw%3D), [MegaFauna dataset](https://stpubtenakanclyw.blob.core.windows.net/marine-detect/MegaFauna-dataset.zip?sp=r&st=2024-02-16T12:11:04Z&se=2025-02-16T20:11:04Z&spr=https&sv=2022-11-02&sr=c&sig=p68C1yNzj49DEgoJZQCX3uG5MK%2FQ3J%2BwIBE9l7NrEGw%3D).
+The images used with annotations (YOLO format) can be downloaded using the following links: [FishInv dataset](https://stpubtenakanclyw.blob.core.windows.net/marine-detect/FishInv-dataset.zip?sv=2022-11-02&ss=bf&srt=co&sp=rltf&se=2099-12-31T18:55:46Z&st=2025-02-03T10:55:46Z&spr=https,http&sig=w%2FTQzrECsYsjtkBXNnnuFtn%2BC06PkjgLxDgRw%2FaUUKI%3D), [MegaFauna dataset](https://stpubtenakanclyw.blob.core.windows.net/marine-detect/MegaFauna-dataset.zip?sv=2022-11-02&ss=bf&srt=co&sp=rltf&se=2099-12-31T18:55:46Z&st=2025-02-03T10:55:46Z&spr=https,http&sig=w%2FTQzrECsYsjtkBXNnnuFtn%2BC06PkjgLxDgRw%2FaUUKI%3D).
 
 ### Datasets split details
 
@@ -41,7 +41,7 @@ The images used with annotations (YOLO format) can be downloaded using the follo
 
 ## 🤖 Model Details
 
-You can download the trained models using the following links: [FishInv model](https://stpubtenakanclyw.blob.core.windows.net/marine-detect/models/FishInv.pt?sp=r&st=2024-02-16T12:11:04Z&se=2025-02-16T20:11:04Z&spr=https&sv=2022-11-02&sr=c&sig=p68C1yNzj49DEgoJZQCX3uG5MK%2FQ3J%2BwIBE9l7NrEGw%3D), [MegaFauna model](https://stpubtenakanclyw.blob.core.windows.net/marine-detect/models/MegaFauna.pt?sp=r&st=2024-02-16T12:11:04Z&se=2025-02-16T20:11:04Z&spr=https&sv=2022-11-02&sr=c&sig=p68C1yNzj49DEgoJZQCX3uG5MK%2FQ3J%2BwIBE9l7NrEGw%3D).
+You can download the trained models using the following links: [FishInv model](https://stpubtenakanclyw.blob.core.windows.net/marine-detect/models/FishInv.pt?sv=2022-11-02&ss=bf&srt=co&sp=rltf&se=2099-12-31T18:55:46Z&st=2025-02-03T10:55:46Z&spr=https,http&sig=w%2FTQzrECsYsjtkBXNnnuFtn%2BC06PkjgLxDgRw%2FaUUKI%3D), [MegaFauna model](https://stpubtenakanclyw.blob.core.windows.net/marine-detect/models/MegaFauna.pt?sv=2022-11-02&ss=bf&srt=co&sp=rltf&se=2099-12-31T18:55:46Z&st=2025-02-03T10:55:46Z&spr=https,http&sig=w%2FTQzrECsYsjtkBXNnnuFtn%2BC06PkjgLxDgRw%2FaUUKI%3D).
 
 ### Performances on test sets
 
@@ -112,7 +112,7 @@ pip install -r requirements.txt
 #### Option 3 - Developing on Your Host OS with PIP:
 
 - Make sure pyenv is installed and working
-- The, run the following commands in the project directory:
+- Then, run the following commands in the project directory:
 ```shell
 pyenv install 3.10
 pyenv local 3.10
