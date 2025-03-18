@@ -14,6 +14,6 @@ pytest-env
 ruff==0.0.292   # If you update Ruff, also change the 'rev' field in .pre-commit-config.yaml
 numpy==1.24.4
 opencv-python==4.8.0.74
-tqdm==4.65.0
+tqdm==4.66.3
 ultralytics==8.0.200
-pillow==10.0.0
+pillow==10.3.0
