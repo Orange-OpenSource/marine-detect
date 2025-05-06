@@ -41,12 +41,9 @@ The images used with annotations (YOLO format) can be downloaded using the follo
 
 ## 🤖 Model Details
 
-You can download the trained models using the following links: [FishInv model](https://stpubtenakanclyw.blob.core.windows.net/marine-detect/models/FishInv.pt?sv=2022-11-02&ss=bf&srt=co&sp=rltf&se=2099-12-31T18:55:46Z&st=2025-02-03T10:55:46Z&spr=https,http&sig=w%2FTQzrECsYsjtkBXNnnuFtn%2BC06PkjgLxDgRw%2FaUUKI%3D), [MegaFauna model](https://stpubtenakanclyw.blob.core.windows.net/marine-detect/models/MegaFauna.pt?sv=2022-11-02&ss=bf&srt=co&sp=rltf&se=2099-12-31T18:55:46Z&st=2025-02-03T10:55:46Z&spr=https,http&sig=w%2FTQzrECsYsjtkBXNnnuFtn%2BC06PkjgLxDgRw%2FaUUKI%3D).
+You can download the trained models using the following links: [FishInv model](https://stpubtenakanclyw.blob.core.windows.net/marine-detect/models2025/FishInv.pt?sv=2022-11-02&ss=bf&srt=co&sp=rltf&se=2099-12-31T18:55:46Z&st=2025-02-03T10:55:46Z&spr=https,http&sig=w%2FTQzrECsYsjtkBXNnnuFtn%2BC06PkjgLxDgRw%2FaUUKI%3D), [MegaFauna model](https://stpubtenakanclyw.blob.core.windows.net/marine-detect/models2025/MegaFauna.pt?sv=2022-11-02&ss=bf&srt=co&sp=rltf&se=2099-12-31T18:55:46Z&st=2025-02-03T10:55:46Z&spr=https,http&sig=w%2FTQzrECsYsjtkBXNnnuFtn%2BC06PkjgLxDgRw%2FaUUKI%3D).
 
 ### Performances on test sets
-
-> [!IMPORTANT]
-> Our models are currently undergoing enhancements for improved performance. More labeled images are on the way and will be used to retrain the models.
 
 <details>
 
@@ -54,9 +51,9 @@ You can download the trained models using the following links: [FishInv model](h
 
 | Class  | Images | Instances | mAP50 | mAP50-95 |
 | ------ | ------ | --------- | ----- | -------- |
-| ray    | 253    | 73        | 0.863 | 0.777    |
-| shark  | 253    | 111       | 0.741 | 0.627    |
-| turtle | 253    | 109       | 0.948 | 0.887    |
+| ray    | 253    | 73        | 0.858 | 0.795    |
+| shark  | 253    | 111       | 0.742 | 0.652    |
+| turtle | 253    | 109       | 0.947 | 0.885    |
 
 </details>
 
@@ -66,21 +63,21 @@ You can download the trained models using the following links: [FishInv model](h
 
 | Class                  | Images | Instances | mAP50 | mAP50-95 |
 | ---------------------- | ------ | --------- | ----- | -------- |
-| fish                   | 499    | 259       | 0.616 | 0.501    |
-| serranidae             | 499    | 49        | 0.850 | 0.777    |
-| urchin                 | 499    | 80        | 0.743 | 0.479    |
-| scaridae               | 499    | 48        | 0.828 | 0.794    |
-| chaetodontidae         | 499    | 65        | 0.891 | 0.827    |
-| giant_clam             | 499    | 102       | 0.870 | 0.602    |
-| lutjanidae             | 499    | 86        | 0.865 | 0.777    |
-| muraenidae             | 499    | 58        | 0.949 | 0.809    |
-| sea_cucumber           | 499    | 33        | 0.969 | 0.939    |
-| haemulidae             | 499    | 22        | 0.972 | 0.945    |
-| lobster                | 499    | 31        | 0.984 | 0.877    |
-| crown_of_thorns        | 499    | 28        | 0.981 | 0.790    |
-| bolbometopon_muricatum | 499    | 19        | 0.993 | 0.936    |
-| cheilinus_undulatus    | 499    | 29        | 0.995 | 0.968    |
-| cromileptes_altivelis  | 499    | 30        | 0.995 | 0.945    |
+| fish                   | 499    | 259       | 0.646 | 0.519    |
+| serranidae             | 499    | 49        | 0.875 | 0.796    |
+| urchin                 | 499    | 80        | 0.771 | 0.473    |
+| scaridae               | 499    | 48        | 0.852 | 0.822    |
+| chaetodontidae         | 499    | 65        | 0.902 | 0.844    |
+| giant_clam             | 499    | 102       | 0.880 | 0.612    |
+| lutjanidae             | 499    | 86        | 0.889 | 0.790    |
+| muraenidae             | 499    | 58        | 0.962 | 0.814    |
+| sea_cucumber           | 499    | 33        | 0.984 | 0.954    |
+| haemulidae             | 499    | 22        | 0.976 | 0.950    |
+| lobster                | 499    | 31        | 0.984 | 0.879    |
+| crown_of_thorns        | 499    | 28        | 0.980 | 0.776    |
+| bolbometopon_muricatum | 499    | 19        | 0.988 | 0.927    |
+| cheilinus_undulatus    | 499    | 29        | 0.995 | 0.967    |
+| cromileptes_altivelis  | 499    | 30        | 0.995 | 0.965    |
 
 </details>
 
@@ -134,7 +131,7 @@ from src.marine_detect.predict import predict_on_images, predict_on_video
 # Predict on a set of images using FishInv and MegaFauna models
 predict_on_images(
     model_paths=["path/to/FishInv/model", "path/to/MegaFauna/model"],
-    confs_threshold=[0.522, 0.6],
+    confs_threshold=[0.523, 0.546],
     images_input_folder_path="path/to/input/images",
     images_output_folder_path="path/to/output/folder",
 )
@@ -142,13 +139,13 @@ predict_on_images(
 # Predict on a video using FishInv and MegaFauna models
 predict_on_video(
     model_paths=["path/to/FishInv/model", "path/to/MegaFauna/model"],
-    confs_threshold=[0.522, 0.6],
+    confs_threshold=[0.523, 0.546],
     input_video_path="path/to/input/video.mp4",
     output_video_path="path/to/output/video.mp4",
 )
 ```
 > [!NOTE]
-> The optimal confidence thresholds for the FishInv model and the MegaFauna model are 0.522 and 0.6, respectively.
+> The optimal confidence thresholds for the FishInv model and the MegaFauna model are 0.523 and 0.546, respectively.
 
 The resulting images or video files will have bounding boxes annotations, visually indicating the location and extent of the detected marine species within the original data. 
 
